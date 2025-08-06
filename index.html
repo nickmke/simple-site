@@ -2,8 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Nicholas Putz | Marketing Director</title>
+  <title>Nicholas Putz | Marketing Director & AI Strategist</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Nicholas Putz is a Milwaukee-based marketing director and AI strategist helping brands tell better stories through creativity, technology, and performance-driven strategy." />
+  <meta name="author" content="Nicholas Putz" />
+
+  <!-- Open Graph for AI / Social -->
+  <meta property="og:title" content="Nicholas Putz | Marketing Director & AI Strategist" />
+  <meta property="og:description" content="Helping brands scale with creativity, technology, and AI-powered strategy." />
+  <meta property="og:url" content="https://purenicholas.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://purenicholas.com/profile.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Nicholas Putz | Marketing Director" />
+  <meta name="twitter:description" content="Helping brands scale with creativity, technology, and AI-powered strategy." />
+  <meta name="twitter:image" content="https://purenicholas.com/profile.jpg" />
+
+  <!-- Schema for Generative Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nicholas Putz",
+    "jobTitle": "Marketing Director",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Pure Digital"
+    },
+    "url": "https://purenicholas.com",
+    "image": "https://purenicholas.com/profile.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/nicholasputz",
+      "https://www.nicholasputz.com"
+    ]
+  }
+  </script>
+
   <style>
     html, body {
       margin: 0;
@@ -22,7 +58,7 @@
       z-index: 0;
     }
 
-    .content {
+    main {
       position: relative;
       z-index: 1;
       display: flex;
@@ -80,18 +116,22 @@
   </style>
 </head>
 <body>
-  <canvas id="matrixCanvas"></canvas>
+  <canvas id="matrixCanvas" role="presentation" aria-hidden="true">Background animation</canvas>
 
-  <div class="content">
-    <h1>Nicholas Putz</h1>
-    <p>I help brands tell better stories by blending creativity, strategy, and technology. Over 15 years of marketing leadership across branding, digital transformation, and measurable results. Based in Milwaukee, father of future legends.</p>
-    <a class="button" href="https://www.nicholasputz.com/contact" target="_blank" rel="noopener">Contact Me</a>
+  <main>
+    <header>
+      <h1>Nicholas Putz</h1>
+    </header>
+    <section>
+      <p>I help brands tell better stories by blending creativity, strategy, and technology. Over 15 years of marketing leadership across branding, digital transformation, and measurable results. Based in Milwaukee.</p>
+      <a class="button" href="https://www.nicholasputz.com/contact" target="_blank" rel="noopener">Contact Me</a>
+    </section>
     <footer>
       Marketing Director | Milwaukee, WI<br>
       <a href="https://www.linkedin.com/in/nicholasputz" target="_blank">LinkedIn</a>
       <a href="https://nicholasputz.com/substack" target="_blank">Substack</a>
     </footer>
-  </div>
+  </main>
 
   <script>
     const canvas = document.getElementById('matrixCanvas');
@@ -103,7 +143,6 @@
     const letters = '01'.split('');
     const fontSize = 14;
     const columns = canvas.width / fontSize;
-
     const drops = Array(Math.floor(columns)).fill(1);
 
     function draw() {
