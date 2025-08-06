@@ -7,7 +7,7 @@
   <meta name="description" content="Nicholas Putz is a Milwaukee-based marketing director and AI strategist helping brands tell better stories through creativity, technology, and performance-driven strategy." />
   <meta name="author" content="Nicholas Putz" />
 
-  <!-- Open Graph for AI / Social -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Nicholas Putz | Marketing Director & AI Strategist" />
   <meta property="og:description" content="Helping brands scale with creativity, technology, and AI-powered strategy." />
   <meta property="og:url" content="https://purenicholas.com" />
@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Helping brands scale with creativity, technology, and AI-powered strategy." />
   <meta name="twitter:image" content="https://purenicholas.com/profile.jpg" />
 
-  <!-- Schema for Generative Engines -->
+  <!-- Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -72,6 +72,16 @@
       backdrop-filter: blur(2px);
     }
 
+    .profile-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 10px rgba(13, 153, 255, 0.4);
+      border: 2px solid #0d99ff;
+    }
+
     h1 {
       font-size: 3rem;
       margin: 0;
@@ -120,6 +130,7 @@
 
   <main>
     <header>
+      <img src="profile.jpg" alt="Nicholas Putz Profile" class="profile-photo" />
       <h1>Nicholas Putz</h1>
     </header>
     <section>
@@ -149,7 +160,7 @@
       ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = '#0d99ff'; // Blue digital rain
+      ctx.fillStyle = '#0d99ff'; // Blue rain
       ctx.font = `${fontSize}px monospace`;
 
       drops.forEach((y, i) => {
