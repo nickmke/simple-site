@@ -1,26 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nicholas Putz | Marketing Director</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body { margin:0; font-family:sans-serif; text-align:center; color:#333; display:flex;
-           flex-direction:column; justify-content:center; height:100vh; background:#fafafa; }
-    h1 { margin:0; font-size:3rem; }
-    p { font-size:1.2rem; margin:0.5rem 0 2rem; max-width:600px; line-height:1.5;}
-    a.button { display:inline-block; padding:0.75rem 1.5rem; color:#fff; background:#007ACC;
-               text-decoration:none; border-radius:4px; font-size:1.1rem; }
-    footer { margin-top:2rem; font-size:0.9rem; color:#777; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      height: 100%;
+      color: #f1f1f1;
+      background: #0f111a;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: repeating-linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.02),
+        rgba(255, 255, 255, 0.02) 1px,
+        transparent 1px,
+        transparent 2px
+      );
+      animation: rain 0.5s linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes rain {
+      from { background-position: 0 0; }
+      to { background-position: 0 2px; }
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.25rem;
+      max-width: 600px;
+      margin: 1rem 0 2rem;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    a.button {
+      background: #0d99ff;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      transition: background 0.2s ease;
+    }
+
+    a.button:hover {
+      background: #0073cc;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    footer a {
+      color: #888;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+    footer a:hover {
+      color: #ccc;
+    }
   </style>
 </head>
 <body>
-  <h1>Nicholas Putz</h1>
-  <p>I help brands tell better stories by blending creativity, strategy, and technology. Over 15 years of marketing leadership across branding, digital transformation, and measurable results. Based in Milwaukee, father of future legends.</p>
-  <a href="https://www.nicholasputz.com/contact" class="button" target="_blank" rel="noopener">Contact Me</a>
-  <footer>
-    Marketing Director | Milwaukee, WI<br>
-    <a href="https://www.linkedin.com/in/nicholasputz" target="_blank" rel="noopener">LinkedIn</a> • <a href="https://nicholasputz.com/substack" target="_blank" rel="noopener">Substack</a>
-  </footer>
+  <div class="content">
+    <h1>Nicholas Putz</h1>
+    <p>I help brands tell better stories by blending creativity, strategy, and technology. Over 15 years of marketing leadership across branding, digital transformation, and measurable results. Based in Milwaukee, father of future legends.</p>
+    <a class="button" href="https://www.nicholasputz.com/contact" target="_blank" rel="noopener">Contact Me</a>
+    <footer>
+      Marketing Director | Milwaukee, WI<br>
+      <a href="https://www.linkedin.com/in/nicholasputz" target="_blank">LinkedIn</a>
+      <a href="https://nicholasputz.com/substack" target="_blank">Substack</a>
+    </footer>
+  </div>
 </body>
 </html>
